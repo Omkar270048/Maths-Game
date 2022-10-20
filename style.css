@@ -1,0 +1,77 @@
+*{outline:none;
+
+  }
+
+  
+
+  #back{
+
+margin-top:10px;
+
+ display:none ;   
+
+  }
+
+  
+
+ 
+
+  #answer{ 
+
+  display:none;
+
+  }
+
+  
+
+  #score{
+
+  display:none;
+
+  }
+
+  
+
+  
+
+  .score{
+
+  color:#fff;
+
+ }
+
+  
+
+  #score2{
+
+  position:absolute;
+
+  top:1px;
+
+  left:60px;
+
+  }
+
+ 
+
+  #rules{
+
+  background-color:#b22222;
+
+  color:#fff;
+
+  border-radius:5px;
+
+  margin-left:10px;
+
+  margin-right:10px;
+
+  margin-top:60px;
+
+  }
+
+  
+
+     
+
+       
