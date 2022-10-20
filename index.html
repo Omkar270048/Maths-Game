@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+      <link rel="stylesheet" href="style.css">
+   
+        
+        <script type=text/javascript>
+            var a, b, c, hide, answer,points,sbb;
+            var score=0;
+var show_score, show_next, show_ans;
+//show_submit_button;
+
+var back;
+// game1 start.......[ square game ]......
+
+function square(){
+ a=Math.round(Math.random()*20);
+ b=a*a;
+ 
+ // question
+  c=document.getElementById("question").style.display="block";
+  c=document.getElementById("question").innerHTML=a;
+ 
+  back=document.getElementById("back").style.height="300px";
+ 
+  //show...................
+ 
+ show_score=document.getElementById("score").style.display="block";
+ 
+ show_ans=document.getElementById("answer").style.display="block";
+ 
+ show_next=document.getElementById("n1").style.display="block";
+ 
+// show_submit_button=document.getElementById("button").style.display="block";
+ 
+   //end show.................
+  
+  //hiding codes
+
+hide=document.getElementById("square").style.display="none";
+hide=document.getElementById("squareroot").style.display="none";
+hide=document.getElementById("n2").style.display="none";
+
+
+
+}
+    
+    
+
+//end hiding
+
+//[ end of game 1 square game.]..........
+
+
+
+
+
+
+//square root game @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+function sqroot(){
+a=Math.round(Math.random()*100);
+var c=Math.sqrt(a);
+ b=Math.round(c);
+ 
+ // question
+  c=document.getElementById("question").style.display="block";
+  c=document.getElementById("question").innerHTML=a;
+
+ back=document.getElementById("back").style.height="300px";
+  //show...................
+ 
+ show_score=document.getElementById("score").style.display="block";
+ 
+ show_ans=document.getElementById("answer").style.display="block";
+ 
+ show_next=document.getElementById("n2").style.display="block";
+ 
+ //show_submit_button=document.getElementById("button").style.display="block";
+ 
+ 
+ 
+ 
+ //end show.................
+  
+  //hiding codes
+
+hide=document.getElementById("square").style.display="none";
+hide=document.getElementById("squareroot").style.display="none";
+hide=document.getElementById("n1").style.display="none";
+
+}
+    
+    
+
+//end hiding
+
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+
+
+
+//game..................................... 
+
+
+  
+
+ function cam(){
+  answer=form.answer.value;
+  
+  if(answer==b){
+    score++;  
+    form.answer.value = "";
+  }
+  
+  else if(answer!=b){
+  alert("Your answer is wrong")  
+  form.answer.value = '';
+  }
+ 
+  else{score;}
+  
+  points=document.getElementById("score2").innerHTML=score;
+  
+}
+
+    
+ function rule(){
+     var rule=document.getElementById("rules").style.display="none";
+    document.getElementById('back').style.display='block';  
+ }
+            
+ // """""""""""""""""""""""""""""""""""""" 
+  function next1(){
+      cam(); square();
+  }
+  
+  function next2(){
+      cam(); sqroot();
+  }          
+        </script>
+        
+    </head>
+
+<!-- Body starts from here -->
+    <body class='text-center'>
+    
+   
+    <div class='container-fluid'>
+
+     <div id='back' class='well'>
+
+        <!-- answer side ---------------->
+
+        <div id=score class='btn btn-success row'>
+            <div class='col col-xs-4'>
+           <div id=score1 class='score'>Score:</div>
+           </div>
+           <div class='col col-xs-8'>
+           <div id=score2 class='score'></div>
+           </div>
+            </div>       
+        <br>
+       <button id='square' class='game btn btn-primary btn-block' onClick=square()>Find Square</button>
+        <button id='squareroot' class='game btn btn-primary btn-block' onClick=sqroot()>Square Root</button>
+        
+      <form name=form>
+          
+      <div id=question class=' btn btn-primary btn-block' style="display:none; width:30%; margin:0 auto;"></div>
+      <br>
+      <input type=number id=answer class='form-control'  placeholder="Answer">
+      <br>
+<!--     <input type=button value=submit id=button onClick="cam()"> -->
+   <div style="width:30%; margin:0 auto;">   
+      <input type=button value=Next class='btn btn-warning form-control' id=n1
+      onClick=next1() style='display:none;'>
+      
+       <input type=button value=Next class='btn btn-warning form-control' id=n2
+      onClick=next2() style='display:none;'></div>
+      
+      </form>
+     
+           
+       </div>
+    
+       
+   </div>    
+       
+    
+ <div id=rules >
+     <h1>Rules</h1>
+     <br>
+<b>  <p> 1) choose any one game. <br><br>
+     2) fill your answer.<br><br>
+     3) Clik on "next" <br> <br>
+     4) enter nearest whole number for square root game.
+ 
+     <br><br>
+     <button class='btn btn-primary' id=ok onClick=rule()>OK</button>
+    
+  </p> </b>
+<br>
+ </div>
+    
+
+
+    </body>
+</html>
+
+
